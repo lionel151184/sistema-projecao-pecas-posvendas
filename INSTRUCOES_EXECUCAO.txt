@@ -1,0 +1,36 @@
+EXECUCAO DO PROJETO (WINDOWS)
+
+FORMA RAPIDA (recomendada): de duplo clique em INICIAR_APP.bat.
+Na primeira vez ele cria o ambiente virtual e instala as dependencias
+(requer Python 3.12+ no PATH e internet). Depois abre o navegador sozinho.
+
+FORMA MANUAL:
+
+1) Instale o Python 3.13 (ou 3.12+) e marque a opcao para adicionar ao PATH.
+
+2) Abra o PowerShell na pasta do projeto.
+
+3) Crie e ative ambiente virtual:
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+4) Instale dependencias:
+pip install -r requirements.txt
+
+5) Rode o aplicativo:
+python run_app.py
+
+6) Acesse no navegador:
+http://localhost:8501
+
+OBSERVACOES IMPORTANTES
+- O arquivo base_os.xlsx deve permanecer na raiz do projeto.
+- Cada linha com data valida conta uma ocorrencia de uso de peca.
+- Casos numera os registros; seus valores nao sao somados.
+- Totais e projecoes representam ocorrencias, nao unidades fisicas nem atendimentos distintos.
+- Preserve os cabecalhos: Casos, Modelo, Data de criação, Descrição da Peça,
+  Código do item: Código, Estado e Cidade. Qtd_peças_SVO nao e mais necessaria.
+- Se o PowerShell bloquear scripts, execute antes:
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+- Se a porta 8501 estiver ocupada:
+python -m streamlit run app.py --server.port 8502

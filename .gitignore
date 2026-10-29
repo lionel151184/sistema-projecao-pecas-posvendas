@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+*.spec
+*.zip
+*.docx
+*.pdf
+arquivos tcc/
+GERAR_ZIP_PARA_PROFESSOR.ps1
+comando para python_login.txt
+Print_conexão_engenharia.png
+~$*
